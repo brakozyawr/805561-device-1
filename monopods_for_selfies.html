@@ -23,7 +23,7 @@
 					</div>
 					<p class="login login_header">
 						<span class="unauthorized_user none"><a href="#">Войти</a></span>
-						<span class="authorized_user "><a href="profile.html">Валентин Петухов</a><a href="#">Выйти</a>
+						<span class="authorized_user "><a href="profile.html">Валентин Петухов</a><a href="#">Выйти</a></span>
 					</p>
 					<p class="compare compare_header"><a href="#">Сравнить</a></p>
 					<p class="cart cart_header"><a href="#">Корзина</a></p>
@@ -65,11 +65,11 @@
 					<h2>Фильтр:</h2>
 					<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 						<fieldset>
-							<legend>Стоимость:</legend>
+							<legend class="legend_prise">Стоимость:</legend>
 							<div class="range_filter">
 								<div class="range_controls">
 									<div class="scale">
-										<div class="bar" style=""></div>
+										<div class="bar"></div>
 									</div>
 									<div class="toggle toggle_min"></div>
 									<div class="toggle toggle_max"></div>
@@ -85,7 +85,7 @@
 							</div>
 						</fieldset>					
 						<fieldset>
-							<legend>Цвет</legend>
+							<legend class="legend_color">Цвет</legend>
 							<ul>
 								<li class="filter_option">
 									<input class="visually_hidden filter_input filter_input_checkbox" type="checkbox" name="black" id="filter_black" checked>
@@ -109,8 +109,8 @@
 								</li>							
 							</ul>
 						</fieldset>					
-						<fieldset>
-							<legend>Bluetooth</legend>
+						<fieldset class="fieldset_bluetooth" >
+							<legend class="legend_bluetooth">Bluetooth</legend>
 							<ul>
 								<li class="filter_option">
 									<input class="visually_hidden filter_input filter_input_radio" type="radio" name="bluetooth" value="true" id="filter_true" checked>
@@ -127,77 +127,84 @@
 				</section>
 				
 				<section class="catalog">
-					<ul class="sort">
-						<li class="sort_item"><h2>Сортировка:</h2></li>
-						<li class="sort_item current">По цене</li>
-						<li class="sort_item">По типу</li>
-						<li class="sort_item">По популярности</li>
-						<li class="sort_item">
-							<button type="button" class="increase"><span class="visually_hidden">по возрастанию цены</span></button>
-							<button type="button" class="decrease current"><span class="visually_hidden">по убыванию цены</span></button>
-						</li>						
-					</ul>
-					
+					<div class="sort_container">
+						<h2 class="h2_sort">Сортировка:</h2>
+						<ul class="sort">							
+							<li class="sort_item current"><a href="#">По цене</a></li>
+							<li class="sort_item"><a href="#">По типу</a></li>
+							<li class="sort_item"><a href="#">По популярности</a></li>
+							<li class="sort_item">
+								<a class="increase" href="#">
+									<span class="visually_hidden">по возрастанию цены</span>								
+								</a>
+							</li>
+							<li class="sort_item">
+								<a class="decrease current" href="#">
+									<span class="visually_hidden">по убыванию цены</span>								
+								</a>
+							</li>						
+						</ul>
+					</div>
 					<h2 class="visually_hidden">Список моноподов для селфи</h2>
 					<ul class="catalog_list">
 						<li class="catalog_item">						
 							<p class="catalog_item_image">
 								<img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
 								<span class="button_wrap">
-									<button type="button" class="button">В корзину</button>
-									<button type="button" class="catalog_item_compare ">Добавить к сравнению</button>
+									<a class="button" href="#">В корзину</a>
+									<a class="catalog_item_compare " href="#">Добавить к сравнению</a>
 								</span>							
 							</p>						
 							<a href="catalog_item.html">
 								<h3>Любительская селфи-палка</h3>
 							</a>
 							<p class="catalog_item_price">
-								500 <span>руб<span>
+								500 <span>руб</span>
 							</p>
 						</li>
 						<li class="catalog_item">						
 							<p class="catalog_item_image">
 								<img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
 								<span class="button_wrap">
-									<button type="button" class="button" href="#">В корзину</button>
-									<button type="button" class="catalog_item_compare ">Добавить к сравнению</button>
+									<a class="button" href="#">В корзину</a>
+									<a class="catalog_item_compare " href="#">Добавить к сравнению</a>
 								</span>
 							</p>
 							<a href="catalog_item.html">
 								<h3>Профессиональная селфи-палка </h3>
 							</a>
 							<p class="catalog_item_price">
-								1 500 <span>руб<span>
+								1 500 <span>руб</span>
 							</p>
 						</li>
 						<li class="catalog_item">						
 							<p class="catalog_item_image">
 								<img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 								<span class="button_wrap">
-									<button type="button" class="button" href="#">В корзину</button>
-									<button type="button" class="catalog_item_compare ">Добавить к сравнению</button>
+									<a class="button" href="#">В корзину</a>
+									<a class="catalog_item_compare " href="#">Добавить к сравнению</a>
 								</span>							
 							</p>						
 							<a href="catalog_item.html">
 								<h3>Непотопляемая селфи-палка</h3>
 							</a>
 							<p class="catalog_item_price">
-								2 500 <span>руб<span>
+								2 500 <span>руб</span>
 							</p>
 						</li>
 						<li class="catalog_item new">						
 							<p class="catalog_item_image">
 								<img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
 								<span class="button_wrap">
-									<button type="button" class="button" href="#">Купить</button>
-									<button type="button" class="catalog_item_compare ">Добавить к сравнению</button>
+									<a class="button" href="#">В корзину</a>
+									<a class="catalog_item_compare " href="#">Добавить к сравнению</a>
 								</span>							
 							</p>						
 							<a href="catalog_item.html">
 								<h3>Селфи-палка «Следуй за мной»</h3>
 							</a>
 							<p class="catalog_item_price">
-								4 900 <span>руб<span>
+								4 900 <span>руб</span>
 							</p>
 						</li>
 					</ul>
@@ -205,17 +212,19 @@
 						<li class="pagination_item">
 							<a href="#">назад</a>
 						</li>
-						<span>
-							<li class="pagination_item pagination_item_current">
-								<a>1</a>
-							</li>					
-							<li class="pagination_item">
-								<a href="#">2</a>
-							</li>
-							<li class="pagination_item">
-								<a href="#">3</a>
-							</li>
-						</span>
+						<li class="pagination_item">
+							<ul class="pagination_sublist">
+								<li class="pagination_item pagination_item_current">
+									<a href="#">1</a>
+								</li>					
+								<li class="pagination_item">
+									<a href="#">2</a>
+								</li>
+								<li class="pagination_item">
+									<a href="#">3</a>
+								</li>
+							</ul>
+						</li>
 						<li class="pagination_item"><a href="#">вперед</a></li>
 					</ul>				
 				</section>	
@@ -233,7 +242,7 @@
 					<div class="submenu">				
 						<p class="login login_footer">
 							<span class="unauthorized_user none"><a href="#">Войти</a></span>
-							<span class="authorized_user "><a href="profile.html">Валентин Петухов</a><a href="#">Выйти</a>
+							<span class="authorized_user "><a href="profile.html">Валентин Петухов</a><a href="#">Выйти</a></span>
 						</p>
 						<p class="compare compare_footer"><a href="#">Сравнить</a></p>
 						<p class="cart cart_footer"><a href="#">Корзина</a></p>		
@@ -263,7 +272,7 @@
 				
 		<section class="modal modal_map" id="map">
 			<h2 class="visually_hidden">Как до нас добраться</h2>
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7a8193ea31c85af21fbd491e9a015ad1e9bf669c676dd7526cad1c7d620a6d3d&amp;width=960&amp;height=559&amp;lang=ru_RU&amp;scroll=true"></script>
+			<script type="text/javascript" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7a8193ea31c85af21fbd491e9a015ad1e9bf669c676dd7526cad1c7d620a6d3d&amp;width=960&amp;height=559&amp;lang=ru_RU&amp;scroll=true"></script>
 			<button class="modal_close" type="button">Закрыть</button>
 		</section>
 	</body>
